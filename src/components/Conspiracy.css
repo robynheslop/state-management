@@ -1,0 +1,22 @@
+.conspiracy-container {
+  border: 1px purple solid;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.conspiracy-left {
+  flex-basis: 70%;
+  display: inline-block;
+  flex-direction: column;
+}
+
+.conspiracy-image {
+  height: 150px;
+}
+
+.conspiracy-owner {
+  display: inline;
+}

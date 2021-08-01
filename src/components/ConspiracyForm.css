@@ -1,0 +1,24 @@
+.conspiracy-form-field {
+    display:flex;
+    padding: 5px;
+}
+
+.conspiracy-form-label {
+    min-width: 100px
+}
+
+.conspiracy-form-description,
+.conspiracy-form-title,
+.conspiracy-form-image-url,
+.conspiracy-form-owner {
+    flex-basis: 80%;
+}
+
+.conspiracy-form-button {
+    margin: 0 auto;
+    font-size: x-large;
+}
+
+textarea {
+    resize: none;
+}
