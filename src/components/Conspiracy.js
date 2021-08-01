@@ -3,10 +3,15 @@ import PropTypes from "prop-types";
 
 import "./Conspiracy.css";
 
-const Conspiracy = ({ title, owner, description, imageUrl }) => {
+const Conspiracy = ({ id, title, owner, description, imageUrl, handleDelete }) => {
+  const onDelete = () => handleDelete(id)
   return (
     <div className="conspiracy-container">
       <div className="conspiracy-left">
+        <button
+        className="conspiracy-is-trash"
+        onClick={onDelete}
+        >🚮</button>
         <h3 className="conspiracy-title">{title}</h3>
         <label>
           CoNSPIRACY Theorist: <h4 className="conspiracy-owner">{owner}</h4>
@@ -26,6 +31,7 @@ Conspiracy.propTypes = {
   owner: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };
 
 Conspiracy.defaultProps = {
@@ -33,6 +39,7 @@ Conspiracy.defaultProps = {
   owner: "",
   description: "",
   imageUrl: process.env.PUBLIC_URL + '/assets/placeholder.svg',
+  handleDelete: () => {}
 };
 
 export default Conspiracy;

@@ -15,10 +15,17 @@ function App({ initialState }) {
       conspiracies: [...conspiracies, { ...newConspiracy, id: uuid() }],
     });
   };
+
+  const handleDelete = (_id) => {
+    setState({
+      ...state,
+      conspiracies: conspiracies.filter(({ id }) => id !== _id),
+    });
+  };
   return (
     <div className="conspiracy-app">
       <Header numberOfConspiracies={conspiracies.length} />
-      <ConspiracyList conspiracies={conspiracies} />
+      <ConspiracyList conspiracies={conspiracies} handleDelete={handleDelete} />
       <ConspiracyForm handleSubmitForm={handleSubmitForm} />
     </div>
   );

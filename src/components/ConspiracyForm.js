@@ -14,7 +14,7 @@ const ConspiracyForm = ({ handleSubmitForm }) => {
   return (
     <div>
       <form className="conspiracy-form">
-        <fieldset>
+        <fieldset className="conspiracy-field-set">
           <legend>What is the government hiding?</legend>
           <div className="conspiracy-form-field">
             <label

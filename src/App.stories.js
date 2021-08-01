@@ -13,7 +13,7 @@ theOneWithSomeConspiracies.args = {
       {
         id: "73d645a2-27f9-4039-80d9-32fe07875252",
         title: "Bill Gates Stuck His Micro Chip In Me Arm :(",
-        owner: "EspresoMartiniGurl",
+        owner: "EspressoMartiniGurl",
         description: "Windows sux",
         imageUrl: "https://i.imgur.com/VowdLtk.jpeg",
       },

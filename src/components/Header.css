@@ -1,7 +1,9 @@
 .header {
-    border: 1px black solid;
+    border: 2px limegreen solid;
+    border-radius: 3px;
 }
 
 .header h1 {
-    color: purple;
+    color: limegreen;
+    font-size: xxx-large;
 }

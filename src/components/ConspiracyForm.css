@@ -1,3 +1,9 @@
+.conspiracy-field-set {
+    border: 2px limegreen solid;
+    border-radius: 3px;
+    font-size: large;
+}
+
 .conspiracy-form-field {
     display:flex;
     padding: 5px;
