@@ -8,7 +8,7 @@ const Header = ({ numberOfConspiracies }) => {
       <h1>CoVID CoNSPIRACIES</h1>
       {numberOfConspiracies === 0 ? (
         <h2>
-          There are no CoNSPIRACIES here. The government has CoNSPIRED against
+          There are no CoNSPIRACIES here! The government has CoNSPIRED against
           the submission of CoNSPIRACIES. Get to work fixing this!!
         </h2>
       ) : (

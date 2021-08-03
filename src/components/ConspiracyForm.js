@@ -9,7 +9,7 @@ const ConspiracyForm = ({ handleSubmitForm }) => {
   const [imageUrl, setImageUrl] = useState("");
   const onClick = (event) => {
     event.preventDefault();
-    handleSubmitForm({title, description, owner, imageUrl});
+    handleSubmitForm({ title, description, owner, imageUrl });
   };
   return (
     <div>
@@ -79,7 +79,7 @@ const ConspiracyForm = ({ handleSubmitForm }) => {
           </div>
           <div className="conspiracy-form-field">
             <button className="conspiracy-form-button" onClick={onClick}>
-                🦠👩‍🔬🧪🧫🔬🧬 CoNTRIBUTE To Science 🦠👩‍🔬🧪🧫🔬🧬
+              🦠👩‍🔬🧪🧫🔬🧬 CoNTRIBUTE To Science 🦠👩‍🔬🧪🧫🔬🧬
             </button>
           </div>
         </fieldset>
@@ -93,7 +93,7 @@ ConspiracyForm.propTypes = {
 };
 
 ConspiracyForm.defaultProps = {
-  handleSubmitForm: () => {},
+  handleSubmitForm: ({ title, imageUrl, description, owner }) => {},
 };
 
 export default ConspiracyForm;

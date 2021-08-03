@@ -1,27 +1,19 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import PropTypes from "prop-types";
 import "./App.css";
 import Header from "./components/Header";
 import ConspiracyForm from "./components/ConspiracyForm";
 import ConspiracyList from "./components/ConspiracyList";
-import { uuid } from "uuidv4";
-
+import reducerFunction from "./reducer-function";
+import { addConspiracyAction, deleteConspiracyAction } from "./actions";
 function App({ initialState }) {
-  const [state, setState] = useState(initialState);
-  const { conspiracies } = state;
-  const handleSubmitForm = (newConspiracy) => {
-    setState({
-      ...state,
-      conspiracies: [...conspiracies, { ...newConspiracy, id: uuid() }],
-    });
-  };
+  const [state, dispatch] = useReducer(reducerFunction, initialState);
 
-  const handleDelete = (_id) => {
-    setState({
-      ...state,
-      conspiracies: conspiracies.filter(({ id }) => id !== _id),
-    });
-  };
+  const { conspiracies } = state;
+  const handleDelete = (id) => dispatch(deleteConspiracyAction(id));
+  const handleSubmitForm = (conspiracy) =>
+    dispatch(addConspiracyAction(conspiracy));
+
   return (
     <div className="conspiracy-app">
       <Header numberOfConspiracies={conspiracies.length} />
